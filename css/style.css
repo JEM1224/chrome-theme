@@ -1,3 +1,204 @@
 .hidden {
   display: none;
 }
+@keyframes rainbow {
+  0% {
+    color: orange;
+  }
+  10% {
+    color: purple;
+  }
+  20% {
+    color: red;
+  }
+  30% {
+    color: CadetBlue;
+  }
+  40% {
+    color: yellow;
+  }
+  50% {
+    color: coral;
+  }
+  60% {
+    color: green;
+  }
+  70% {
+    color: cyan;
+  }
+  80% {
+    color: DeepPink;
+  }
+  90% {
+    color: DodgerBlue;
+  }
+  100% {
+    color: orange;
+  }
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 10%,
+    rgba(208, 222, 33, 1) 20%,
+    rgba(79, 220, 74, 1) 30%,
+    rgba(63, 218, 216, 1) 40%,
+    rgba(47, 201, 226, 1) 50%,
+    rgba(28, 127, 238, 1) 60%,
+    rgba(95, 21, 242, 1) 70%,
+    rgba(186, 12, 248, 1) 80%,
+    rgba(251, 7, 217, 1) 90%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  font-family: "궁서";
+  display: flex;
+}
+#bubble {
+  position: absolute;
+  z-index: 2;
+
+  width: 200px;
+  left: 500px;
+}
+#bubble img {
+  width: inherit;
+}
+#weather {
+  position: absolute;
+  top: 60px;
+  right: 40px;
+}
+#side {
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.fast {
+  position: relative;
+  margin-left: 100px;
+  display: flex;
+}
+
+.fast__add,
+.fast__add__new {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.fast__add__new button {
+  background-color: transparent;
+  border: none;
+}
+.fast__add__new img {
+  width: 50px;
+  height: 50px;
+}
+.fast span {
+  transform: rotate(90deg);
+  color: white;
+  position: absolute;
+  top: 10px;
+  white-space: nowrap;
+  font-size: 48px;
+}
+#bg {
+  display: flex;
+  justify-content: flex-end;
+}
+#bg img {
+  width: 500px;
+  height: 500px;
+  padding-top: 30px;
+}
+#bg:hover {
+  transform: scale(1.5);
+  transition: 0.5s;
+}
+
+#todo {
+  bottom: 50px;
+  font-size: larger;
+}
+
+ul {
+  margin: 10px 0px;
+  padding: 0px;
+}
+ul li {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+li button {
+  margin: 5px;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+input {
+  outline: none;
+  border: none;
+  width: 200px;
+  border-radius: 15px;
+  background-color: transparent;
+}
+input::placeholder {
+  color: black;
+  font-family: "궁서";
+  font-weight: bold;
+  font-size: larger;
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  transform: translate(10%, 10%);
+}
+#quote img {
+  position: absolute;
+  overflow: hidden;
+}
+#quote:hover > img {
+  display: none;
+}
+#quote span {
+  width: 200px;
+}
+#quote span:first-child {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+#greeting {
+  position: absolute;
+  z-index: 2;
+  top: 40px;
+  font-size: 100px;
+  font-weight: bold;
+  animation: rainbow 3s infinite;
+}
+@keyframes clockAnimation {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(150px, 150px);
+  }
+}
+#clock {
+  position: absolute;
+  animation: clockAnimation 3s linear infinite alternate;
+}

@@ -5,37 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Momemtum App</title>
+    <title>MESS</title>
   </head>
   <body>
-    <form id="login-form" class="hidden">
-      <input
-        required
-        maxlength="12"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <button>Log In</button>
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input tpye="text" placeholder="Write a To Do and Press enter" required />
-    </form>
-    <ul id="todo-list"></ul>
+    <div id="bubble">
+      <img src="img/bubble.png" />
+      <div id="weather">
+        <span>위치확인</span>
+        <span>허용,,,해,,</span>
+      </div>
+    </div>
+
+    <marquee behavior="scroll" id="greeting" class="hidden"> </marquee>
+    <div id="bg"></div>
+    <div id="side">
+      <form id="login-form" class="hidden">
+        <input
+          required
+          maxlength="12"
+          type="text"
+          placeholder="What is your name?"
+        />
+        <button>Log In</button>
+      </form>
+      <h2 id="clock">저기..지금..몇시야???</h2>
+
+      <div>
+        <div id="todo">
+          <form id="todo-form">
+            <input tpye="text" placeholder="투두리스트 입력하는 곳" required />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+    </div>
+
     <div id="quote">
-      <span></span>
-      <span></span>
+      <span id="text"></span>
+      <span id="author"></span>
+      <img src="img/mess.jpg" />
     </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+    <marquee direction="up" class="fast">
+      <span>바로가기</span>
+      <div class="fast__add">
+        <button>➕</button>
+      </div>
+    </marquee>
+
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/fast.js"></script>
   </body>
 </html>

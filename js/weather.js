@@ -13,8 +13,6 @@ function onGeoOk(pos) {
       weather.innerText = `${data.weather[0].main}/${data.main.temp}`;
     })
   );
-
-  console.log(url);
 }
 function onGeoError() {
   alert("Can't find you, no weather for you.");
